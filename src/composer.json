@@ -1,0 +1,14 @@
+{
+  "require": {
+    "vlucas/phpdotenv": "^2.4",
+    "predis/predis": "^1.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Src\\": "."
+    },
+    "files": [
+      "helpers/helpers.php"
+    ]
+  }
+}
