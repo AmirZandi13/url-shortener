@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
+         colors="true"
+>
+    <testsuites>
+        <testsuite name="Unit">
+            <directory suffix="Test.php">./tests/</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <env name="AUDIENCE" value="api://default"/>
+        <env name="BASE_SHORT_URL" value="127.0.0.1:8000"/>
+        <env name="DB_CONNECTION" value="mysql"/>
+        <env name="DB_HOST" value="127.0.0.1"/>
+        <env name="DB_PORT" value="33060"/>
+        <env name="DB_DATABASE" value="test"/>
+        <env name="DB_USERNAME" value="root"/>
+        <env name="DB_PASSWORD" value="example"/>
+        <env name="CACHE_CONNECTION" value="redis"/>
+        <env name="CACHE_HOST" value="127.0.0.1"/>
+        <env name="CACHE_PORT" value="6378"/>
+        <env name="URL_SHORTENER_CACHE_LIFETIME" value="10080"/>
+    </php>
+</phpunit>

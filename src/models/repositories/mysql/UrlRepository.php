@@ -40,7 +40,8 @@ class UrlRepository extends BaseRepository implements RepositoryInterface
      *
      * @return mixed
      */
-    public function insertUrlInDB(string $url, string $code){
+    public function insertUrlInDB(string $url, string $code)
+    {
         $query = "INSERT INTO ". $this->model->getTable() ." (original_url, short_url, user_id) VALUES (:original_url, :short_url, :user_id)";
         $stmnt = $this->model->getDb()->prepare($query);
         $params = array(
@@ -50,7 +51,7 @@ class UrlRepository extends BaseRepository implements RepositoryInterface
         );
         $stmnt->execute($params);
 
-        return $this->model->getDb()->lastInsertId();
+        return true;
     }
 
     /**
@@ -58,7 +59,8 @@ class UrlRepository extends BaseRepository implements RepositoryInterface
      *
      * @return mixed
      */
-    public function getUrlFromDB(string $code){
+    public function getUrlFromDB(string $code)
+    {
         $query = "SELECT id, original_url FROM ". $this->model->getTable() ." WHERE short_url = :short_url LIMIT 1";
         $stmt = $this->model->getDb()->prepare($query);
         $params=array(
