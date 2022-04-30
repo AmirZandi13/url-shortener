@@ -29,6 +29,10 @@ Tiny url are exceedingly handy to share through sms/tweets (where there is limit
 #### Long URL: https://aparat.com/live/dfdvrghn
 #### Short URL : https://tinyurl.com/3sh2ps6v
 
+
+## APIs
+You can see the file named curls.txt
+
 ## License
 
 This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
